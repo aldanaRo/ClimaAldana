@@ -1,0 +1,24 @@
+<ion-view view-title="{{weatherToday.dt*1000 | date}}">
+  <ion-content class="padding">
+    <div class="list card">
+  <div class="item tabs tabs-secondary tabs-icon-left">
+      <img src="http://openweathermap.org/img/w/{{weatherToday.weather[0].icon}}.png" />
+      <p>{{city}}. {{weatherToday.dt*1000  | date}}</p>
+    </div>
+    <div class="item tabs tabs-secondary tabs-icon-left">
+      <p>({{weatherToday.weather[0].main}}) {{weatherToday.weather[0].description}}</p>
+    </div>
+    <div class="item tabs tabs-secondary tabs-icon-left">
+      <p>Humedad: {{weatherToday.main.humidity}}</p>
+    </div>
+    <div class="item tabs tabs-secondary tabs-icon-left">
+      <p>Temperatura: {{weatherToday.main.temp}}</p>
+    </div>
+    <div class="item tabs tabs-secondary tabs-icon-left">
+      <p>Temperatura Máxima: {{weatherToday.main.temp_max}}</p>
+    </div>
+    <div class="item tabs tabs-secondary tabs-icon-left">
+      <p>Temperatura Mínima: {{weatherToday.main.temp_min}}</p>
+    </div>
+  </ion-content>
+</ion-view>
